@@ -1,14 +1,14 @@
 # IT Runbook — Olsen Romelus
 
-A personal IT runbook documenting procedures, troubleshooting steps, lab work, and resolved tickets from hands-on practice, my homelab, and the **Per Scholas IT Support Program**. I'm **CompTIA A+ certified** and now studying for **Security+**.
+A personal IT runbook documenting procedures, troubleshooting steps, lab work, and resolved tickets from hands-on practice and my homelab.
 
-This repository serves as a living reference and portfolio piece demonstrating practical IT support skills across Active Directory, networking, Windows and Linux administration, and scripting.
+This repository serves as a living reference and portfolio piece demonstrating practical IT support skills, starting with Linux administration, with Active Directory, networking, and Windows entries coming next.
 
 ---
 
 ## About Me
 
-**Olsen Romelus** — IT Support candidate focused on help desk and desktop support roles, building toward cybersecurity and penetration testing. CompTIA A+ certified and a graduate of the Per Scholas IT Support Program (November 2026). This runbook reflects real lab work, self-study, and problem-solving experience built along the way.
+**Olsen Romelus** — IT Support candidate focused on help desk and desktop support roles, building toward cybersecurity and penetration testing. CompTIA A+ certified, now studying for Security+, and a graduate of the Per Scholas IT Support Program (November 2026). This runbook reflects real lab work, self-study, and problem-solving experience built along the way.
 
 ---
 
