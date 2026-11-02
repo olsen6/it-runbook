@@ -1,5 +1,14 @@
 # Dual-Boot Setup: Arch + Windows 11 on Separate SSDs
 
+| Field | Details |
+|---|---|
+| **Type** | Ticket |
+| **Category** | Linux / Boot Configuration |
+| **Environment** | Custom PC with two SSDs: Arch Linux and Windows 11 |
+| **Status** | Resolved |
+| **Tools** | UEFI firmware settings |
+| **Skills** | UEFI/BIOS configuration, risk assessment, troubleshooting |
+
 > Follow-up to [Arch Linux Install in a VM: Bootloader and Boot Failures](Arch-Linux-VM-Install-Boot-Failures.md). After the install worked in the VM, this is how it went on real hardware.
 
 ## Problem

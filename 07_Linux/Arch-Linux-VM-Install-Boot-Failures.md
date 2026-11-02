@@ -1,5 +1,14 @@
 # Arch Linux Install in a VM: Bootloader and Boot Failures
 
+| Field | Details |
+|---|---|
+| **Type** | Ticket |
+| **Category** | Linux / OS Installation |
+| **Environment** | VirtualBox VM (Arch Linux) |
+| **Status** | Resolved |
+| **Tools** | VirtualBox, GRUB, Arch installation guide |
+| **Skills** | Linux installation, bootloader troubleshooting, testing before deployment |
+
 ## Problem
 Installing Arch Linux in VirtualBox before putting it on new hardware. The first four installs failed.
 
