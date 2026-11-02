@@ -13,7 +13,7 @@ Installing Arch Linux in VirtualBox before putting it on new hardware. The first
 - **Attempt 5 installed and booted successfully.**
 - Tested everything in the VM first, so the real PC was never at risk.
 - After it booted, built the desktop from scratch: Hyprland, taskbar, clock, file manager, system monitor, and apps.
-- After it worked in the VM, installed Arch on real hardware. See *Dual-Boot Setup: Arch + Windows 11 on Separate SSDs*.
+- After it worked in the VM, installed Arch on real hardware. See [Dual-Boot Setup: Arch + Windows 11 on Separate SSDs](Dual-Boot-Arch-Windows11-Separate-SSDs.md).
 
 ## Lesson
 - Test in a VM before deploying to real hardware.
