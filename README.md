@@ -8,7 +8,7 @@ This repository serves as a living reference and portfolio piece demonstrating p
 
 ## About Me
 
-**Olsen Romelus** — IT Support candidate focused on help desk and desktop support roles, building toward cybersecurity and penetration testing. CompTIA A+ certified and finishing the Per Scholas IT Support Program (November 2026). This runbook reflects real lab work, self-study, and problem-solving experience built along the way.
+**Olsen Romelus** — IT Support candidate focused on help desk and desktop support roles, building toward cybersecurity and penetration testing. CompTIA A+ certified and a graduate of the Per Scholas IT Support Program (November 2026). This runbook reflects real lab work, self-study, and problem-solving experience built along the way.
 
 ---
 
