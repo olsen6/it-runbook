@@ -18,6 +18,8 @@ This repository serves as a living reference and portfolio piece demonstrating p
 |---|---|---|---|
 | [Arch Linux Install in a VM: Bootloader and Boot Failures](07_Linux/Arch-Linux-VM-Install-Boot-Failures.md) | Ticket | Linux / OS Installation | Four failed installs (GRUB and boot misconfiguration) before a clean install by changing my approach |
 | [Dual-Boot Setup: Arch + Windows 11 on Separate SSDs](07_Linux/Dual-Boot-Arch-Windows11-Separate-SSDs.md) | Ticket | Linux / Boot Configuration | Fixed boot order in UEFI, then isolated Windows to run Arch full time |
+| [Arch Update Failing: PGP "Unknown Trust" and File Conflicts](07_Linux/Arch-Update-PGP-Keyring-and-File-Conflicts.md) | Ticket | Linux / Package Management | Reset an outdated keyring, then cleared leftover files with a scoped overwrite |
+| [Bootable USB with dd](07_Linux/Bootable-USB-with-dd.md) | Quick Reference | Linux CLI / OS Installation | Verify an ISO, find the right drive, and write a bootable USB safely |
 
 ---
 
