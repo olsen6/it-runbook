@@ -22,6 +22,7 @@ This repository serves as a living reference and portfolio piece demonstrating p
 | [Bootable USB with dd](07_Linux/Bootable-USB-with-dd.md) | Quick Reference | Linux CLI / OS Installation | Verify an ISO, find the right drive, and write a bootable USB safely |
 | [Hyprland Update Broke the Desktop: Migrating hyprland.conf to Lua](07_Linux/Hyprland-0.57-Lua-Config-Migration.md) | Ticket | Linux / Desktop Environment | Hyprland 0.57 dropped the old config format; converted my config to Lua by hand |
 | [Proxmox VE Homelab Server on a Lenovo M720s ("Olympus")](08_Homelab/Proxmox-VE-Install-Lenovo-M720s.md) | Lab Build | Virtualization / Homelab | Turned a used business PC into a Proxmox server; Docker VM in progress |
+| [Tailscale Install Failed: Old Package List, Full Disk, No Reboot](07_Linux/Tailscale-Install-Disk-Full-Kernel-Mismatch.md) | Ticket | Linux / Package Management / Networking | Three stacked problems found by reading logs: stale mirrors, full root partition, kernel not rebooted |
 
 ---
 
