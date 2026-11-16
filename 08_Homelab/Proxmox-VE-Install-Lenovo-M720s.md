@@ -10,7 +10,7 @@
 | **Skills** | Hypervisor installation, BIOS/UEFI configuration, static IP networking, Linux package repositories, VM provisioning |
 
 ## Goal
-Turn a used business PC into a 24/7 homelab server for self-hosted services in Docker and, later, an isolated Active Directory lab. Examples of what I plan to run: Uptime Kuma, Pi-hole, and Jellyfin.
+I bought a used business PC to run 24/7 as my homelab server. The plan is self-hosted apps in Docker (things like Uptime Kuma, Pi-hole, and Jellyfin) and later an isolated Active Directory lab.
 
 ## Environment
 - **Host:** Lenovo M720s SFF ("Olympus"), Intel i5-8400 (6 cores), 8 GB RAM, 256 GB Samsung NVMe, integrated graphics only
@@ -20,33 +20,32 @@ Turn a used business PC into a 24/7 homelab server for self-hosted services in D
 - **Remote access:** Tailscale on the server, my PC, and my phone
 
 ## Steps
-1. **Made the installer USB on my Arch PC.** Verified the ISO with `sha256sum`, then wrote it with `dd`. See [Bootable USB with dd](../07_Linux/Bootable-USB-with-dd.md).
-2. **Enabled virtualization in the BIOS** (Intel VT-x and VT-d).
-3. **Installed Proxmox** to the 256 GB NVMe (ext4), with hostname `olympus.lab` and a static IP on the home LAN.
-4. **Logged in to the web UI** from my PC on port 8006.
-5. **Switched to the free update repositories:** disabled the enterprise repos and added the No-Subscription repo.
-6. **Updated and rebooted** to load the new kernel.
-7. **Set up remote access with Tailscale.** Installed it on the Proxmox host and joined it to the same private network as my phone and PC. Now I can manage the server from anywhere without opening ports on my router.
-8. **Created VM 100 `hermes`** from the Debian 13 netinst ISO: 2 cores (CPU type `host`), 3 GB RAM, 40 GB disk, and the QEMU Guest Agent on.
-9. **Installed Debian as a server:** no desktop environment, only the SSH server and standard utilities, all files in one partition.
+1. Made the installer USB on my Arch PC. Checked the ISO with `sha256sum`, then wrote it with `dd` ([Bootable USB with dd](../07_Linux/Bootable-USB-with-dd.md)).
+2. Turned on Intel VT-x and VT-d in the BIOS.
+3. Installed Proxmox on the 256 GB NVMe (ext4), hostname `olympus.lab`, static IP on my home network.
+4. Logged in to the web UI from my PC on port 8006.
+5. Turned off the paid enterprise repos and added the free No-Subscription repo.
+6. Updated everything and rebooted for the new kernel.
+7. Installed Tailscale on the server so I can reach it from my phone and PC anywhere, without opening any ports on my router.
+8. Created VM 100, `hermes`, from the Debian 13 netinst ISO: 2 cores (CPU type `host`), 3 GB RAM, 40 GB disk, QEMU Guest Agent on.
+9. Installed Debian with no desktop, just the SSH server and standard utilities.
 
 ## Verification
-- `ip a` on the console showed the expected static IP, and `ping` to the internet worked.
-- The web UI loads from my PC, and the node shows a green status.
-- Refreshing updates reached all four repositories (Debian, Debian security, and the Proxmox no-subscription repo) with **TASK OK**.
-- After the upgrade, the system reported "up-to-date" and booted cleanly on the new kernel.
-- With my phone on cell data (off the home Wi-Fi), the Proxmox web UI loaded through Tailscale.
+- `ip a` showed the right IP and `ping` to the internet worked.
+- The web UI loads from my PC and the node shows green.
+- Updates pulled from every repo with **TASK OK**, and the server came back up fine on the new kernel.
+- With Wi-Fi off on my phone (cell data only), the Proxmox UI still loaded through Tailscale.
 
 ## Issues Hit
-- **`apt-get update` failed right after install.** Proxmox points at the paid enterprise repositories by default, and they reject servers without a subscription. Switching to the No-Subscription repo fixed it.
-- **A "No valid subscription" popup appears at every login.** This is normal for the free version, so I just click OK.
-- **Docker doesn't belong on the Proxmox host itself.** It can interfere with Proxmox networking, so I put it in a dedicated Debian VM instead.
-- **The VM console got stuck in Caps Lock.** The VM's Caps Lock got out of sync with my keyboard. Pressing Caps Lock inside the console fixed it. Going forward I'll use SSH for the VM, since the console also doesn't support paste.
+- Updates failed right after install. Proxmox uses the paid enterprise repos by default and they block you without a subscription. Switching to the free repo fixed it.
+- A "No valid subscription" popup shows up every time I log in. That's normal on the free version.
+- I didn't install Docker on the Proxmox host directly because it can mess with Proxmox's networking. It gets its own Debian VM instead.
+- The VM console got stuck in Caps Lock (the VM and my keyboard got out of sync). Pressing Caps Lock inside the console fixed it. I'll use SSH for the VM from now on since the console can't paste either.
 
 ## Lesson
-- Check the BIOS virtualization settings before installing a hypervisor.
-- Free Proxmox needs the No-Subscription repo, or updates fail.
-- Keep the hypervisor clean and put apps in VMs or containers, so a broken app never takes down the host.
+- Turn on virtualization in the BIOS before installing a hypervisor.
+- Free Proxmox needs the No-Subscription repo or updates fail.
+- Keep the host clean. If an app breaks inside a VM, the server stays up.
 
 ## Next
 - Install Docker and Portainer on `hermes`

@@ -8,7 +8,7 @@
 | **Skills** | Linux CLI, file integrity verification, disk identification |
 
 ## When to Use This
-Turning an ISO into a bootable USB installer from Linux, without extra software.
+Making a bootable USB from an ISO on Linux, no extra apps needed. I used this for my Proxmox installer.
 
 ## Commands / Settings
 
@@ -25,7 +25,7 @@ Turning an ISO into a bootable USB installer from Linux, without extra software.
 | `sync` | Flushes any remaining writes. Optional extra safety before unplugging. | `sync` |
 
 ## Notes
-- **Write to the whole disk, not a partition:** `/dev/sda`, not `/dev/sda1`.
-- **Triple-check `of=`.** `dd` never asks "are you sure?" Point it at the wrong drive and that drive is wiped instantly. That's why it's nicknamed "disk destroyer."
-- No need to format the USB first; `dd` overwrites everything.
-- Wait for the prompt to come back before unplugging.
+- Use the whole disk (`/dev/sda`), not a partition (`/dev/sda1`).
+- Check `of=` more than once. `dd` doesn't ask for confirmation, and pointing it at the wrong drive wipes that drive. People call it "disk destroyer" for a reason.
+- You don't need to format the USB first.
+- Wait for the prompt to come back before pulling the USB.

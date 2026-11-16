@@ -1,14 +1,12 @@
 # IT Runbook — Olsen Romelus
 
-A personal IT runbook documenting procedures, troubleshooting steps, lab work, and resolved tickets from hands-on practice and my homelab.
-
-This repository serves as a living reference and portfolio piece demonstrating practical IT support skills, starting with Linux administration, with Active Directory, networking, and Windows entries coming next.
+My notes from fixing things, building labs, and breaking my own setup. Mostly Linux and homelab work so far. Active Directory, networking, and Windows entries are coming as I do them.
 
 ---
 
 ## About Me
 
-**Olsen Romelus** — IT Support candidate focused on help desk and desktop support roles, building toward cybersecurity and penetration testing. CompTIA A+ certified, now studying for Security+, and a graduate of the Per Scholas IT Support Program (November 2026). This runbook reflects real lab work, self-study, and problem-solving experience built along the way.
+I'm Olsen. I'm going for help desk and desktop support roles, with cybersecurity and pentesting as the long-term goal. CompTIA A+ certified, Per Scholas IT Support grad (Nov 2026), studying for Network+ and Security+. Everything here is stuff I actually ran into.
 
 ---
 
@@ -34,20 +32,20 @@ This repository serves as a living reference and portfolio piece demonstrating p
 | `08_Homelab/` | Homelab server builds: Proxmox, VMs, and self-hosted services |
 | `_templates/` | Templates for each type of entry: **Ticket**, **Lab Build**, and **Quick Reference** |
 
-**Coming soon:** Active Directory, Custom PC Build, Networking, Windows, PowerShell, and Tickets Solved sections. Each is added once it has real content.
+More folders (Active Directory, Networking, Windows, PowerShell) get added once I have real entries for them.
 
 ---
 
 ## How to Use This Runbook
 
-Each document is a standalone reference, and each one starts with a summary table (type, category, environment, status, tools, and skills). Entries come in three types:
+Every entry starts with a quick summary table. There are three kinds:
 
 - **Ticket:** Problem → Diagnosis → Resolution → Lesson
 - **Lab Build:** Goal → Environment → Steps → Verification → Issues Hit → Lesson
 - **Quick Reference:** commands and settings for a specific tool or topic
 
-Entries are updated as new issues are encountered and resolved.
+I update entries when something changes or breaks again.
 
 ---
 
-> This repository is part of my public IT portfolio. Feedback and suggestions are welcome.
+> If you spot a mistake or a better way to do something, let me know.

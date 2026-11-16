@@ -10,20 +10,20 @@
 | **Skills** | Linux installation, bootloader troubleshooting, testing before deployment |
 
 ## Problem
-Installing Arch Linux in VirtualBox before putting it on new hardware. The first four installs failed.
+I wanted to practice installing Arch in VirtualBox before putting it on my new PC. My first four installs failed.
 
 ## Diagnosis
-- **Attempts 1–2:** Broke the **GRUB bootloader**, so the VM couldn't load the OS.
-- **Attempts 3–4:** The system was **misconfigured** and wouldn't boot.
-- **Root cause:** Kept repeating the same approach without stepping back to check whether my process or my source was the problem.
+- Attempts 1 and 2: I broke the GRUB bootloader, so the VM couldn't load the OS.
+- Attempts 3 and 4: something else was misconfigured and it still wouldn't boot.
+- The real problem: I kept doing the same thing over and over instead of asking whether the guide I was following was the issue.
 
 ## Resolution
-- **Switched to a different installation guide** and followed it **step by step**, checking each stage before moving on.
-- **Attempt 5 installed and booted successfully.**
-- Tested everything in the VM first, so the real PC was never at risk.
-- After it booted, built the desktop from scratch: Hyprland, taskbar, clock, file manager, system monitor, and apps.
-- After it worked in the VM, installed Arch on real hardware. See [Dual-Boot Setup: Arch + Windows 11 on Separate SSDs](Dual-Boot-Arch-Windows11-Separate-SSDs.md).
+- Switched to a different install guide and went slower, checking each step before moving on.
+- Attempt 5 installed and booted.
+- Since it was all in a VM, none of the failed attempts touched my real PC.
+- Once it booted, I set up the desktop myself: Hyprland, a taskbar, clock, file manager, system monitor, and my apps.
+- Then I installed it on the real PC. That's in [Dual-Boot Setup: Arch + Windows 11 on Separate SSDs](Dual-Boot-Arch-Windows11-Separate-SSDs.md).
 
 ## Lesson
-- Test in a VM before deploying to real hardware.
-- When you're running in circles, stop and review your sources and your process instead of repeating the same mistakes.
+- Try it in a VM first. Breaking a VM costs nothing.
+- If I fail the same way twice, I need to change my approach, not just try again.

@@ -10,7 +10,7 @@
 | **Skills** | Reading logs, disk space cleanup, kernel modules, troubleshooting one error at a time |
 
 ## Problem
-I wanted my Arch PC on the same Tailscale network as my homelab server and phone. The install failed three times, with a different error each time.
+I wanted my Arch PC on the same Tailscale network as my homelab server and phone. It failed three times, with a different error each time.
 
 ## Diagnosis
 1. **404 errors.** Every mirror returned 404 for the Tailscale package.
@@ -42,7 +42,7 @@ I wanted my Arch PC on the same Tailscale network as my homelab server and phone
 5. Confirmed my PC, server, and phone all show online, and that `ssh root@olympus` works from my PC.
 
 ## Lesson
-- Fix one error at a time and re-test. Each fix revealed the next problem.
-- Read the logs first. `journalctl` told me exactly what was missing and why.
+- One thing at a time. Every fix uncovered the next problem.
+- Check the logs before guessing. `journalctl` basically told me the answer.
 - Reboot after kernel updates, and run `sudo pacman -Sc` now and then so the cache doesn't fill the disk.
 - Use `pacman -Syu`, not `pacman -Sy <package>`. Partial updates can break Arch.
