@@ -19,7 +19,9 @@ I'm Olsen. I'm going for help desk and desktop support roles, with cybersecurity
 | [Arch Update Failing: PGP "Unknown Trust" and File Conflicts](07_Linux/Arch-Update-PGP-Keyring-and-File-Conflicts.md) | Ticket | Linux / Package Management | Reset an outdated keyring, then cleared leftover files with a scoped overwrite |
 | [Bootable USB with dd](07_Linux/Bootable-USB-with-dd.md) | Quick Reference | Linux CLI / OS Installation | Verify an ISO, find the right drive, and write a bootable USB safely |
 | [Hyprland Update Broke the Desktop: Migrating hyprland.conf to Lua](07_Linux/Hyprland-0.57-Lua-Config-Migration.md) | Ticket | Linux / Desktop Environment | Hyprland 0.57 dropped the old config format; converted my config to Lua by hand |
-| [Proxmox VE Homelab Server on a Lenovo M720s ("Olympus")](08_Homelab/Proxmox-VE-Install-Lenovo-M720s.md) | Lab Build | Virtualization / Homelab | Turned a used business PC into a Proxmox server; Docker VM in progress |
+| [Proxmox VE Homelab Server on a Lenovo M720s ("Olympus")](08_Homelab/Proxmox-VE-Install-Lenovo-M720s.md) | Lab Build | Virtualization / Homelab | Turned a used business PC into a Proxmox server with a Debian Docker VM |
+| [Self-Hosted Apps on hermes](08_Homelab/Self-Hosted-Apps-Docker-hermes.md) | Lab Build | Homelab / Containers | Portainer, Uptime Kuma, Pi-hole over Tailscale, Jellyfin, and Navidrome in Docker |
+| [Nightly Proxmox Backups with a Second Copy on My PC](08_Homelab/Proxmox-Backups-Second-Copy-on-PC.md) | Lab Build | Homelab / Backup and Recovery | Nightly VM backups, an old Windows drive wiped for storage, and an automatic daily copy with rsync |
 | [Tailscale Install Failed: Old Package List, Full Disk, No Reboot](07_Linux/Tailscale-Install-Disk-Full-Kernel-Mismatch.md) | Ticket | Linux / Package Management / Networking | Three stacked problems found by reading logs: stale mirrors, full root partition, kernel not rebooted |
 
 ---

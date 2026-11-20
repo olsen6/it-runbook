@@ -16,7 +16,8 @@ I bought a used business PC to run 24/7 as my homelab server. The plan is self-h
 - **Host:** Lenovo M720s SFF ("Olympus"), Intel i5-8400 (6 cores), 8 GB RAM, 256 GB Samsung NVMe, integrated graphics only
 - **Hypervisor:** Proxmox VE 9.2, hostname `olympus.lab`
 - **Network:** wired to the home router through a wall jack, static IP on the home LAN. A separate router (R7800 with OpenWrt) will isolate the lab later.
-- **VMs:** VM 100 `hermes`, Debian 13 (Docker host, Docker not installed yet)
+- **VMs:** VM 100 `hermes`, Debian 13 Docker host ([apps running on it](Self-Hosted-Apps-Docker-hermes.md))
+- **Backups:** nightly, with a second copy on my PC ([how](Proxmox-Backups-Second-Copy-on-PC.md))
 - **Remote access:** Tailscale on the server, my PC, and my phone
 
 ## Steps
@@ -48,6 +49,6 @@ I bought a used business PC to run 24/7 as my homelab server. The plan is self-h
 - Keep the host clean. If an app breaks inside a VM, the server stays up.
 
 ## Next
-- Install Docker and Portainer on `hermes`
-- First containers: Uptime Kuma, then Pi-hole (DNS only until the lab network is isolated)
-- Add a second 8 GB RAM stick, then build the Active Directory lab on an internal-only Proxmox network
+- ~~Install Docker and the first apps on `hermes`~~ Done: [Self-Hosted Apps on hermes](Self-Hosted-Apps-Docker-hermes.md)
+- ~~Set up backups~~ Done: [Nightly Proxmox Backups](Proxmox-Backups-Second-Copy-on-PC.md)
+- Add a second 8 GB RAM stick, then build the cyber lab on an internal-only Proxmox network
