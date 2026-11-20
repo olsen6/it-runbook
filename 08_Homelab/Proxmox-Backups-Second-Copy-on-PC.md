@@ -46,6 +46,7 @@ Back up my Docker VM every night, and keep a second copy off the server. A backu
 - `df -h /mnt/storage` shows 916G mounted.
 - `ssh root@olympus exit` works with no password prompt.
 - `tailscale status` shows a direct connection to `olympus`, not a relay.
+- Ran the copy job once by hand. It finished with `status=0/SUCCESS`, and the 4.3 GB backup on my PC matches the one on the server.
 
 ## Issues Hit
 - **Pasting added junk to the command** (`^[[200~...~`), so the shell said `command not found`. It's a terminal paste glitch. Pasting again worked.
